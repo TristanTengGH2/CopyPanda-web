@@ -27,6 +27,10 @@ The expected project URL is `https://tristantenggh2.github.io/CopyPanda-web/`.
 Progress is stored in browser local storage for the hosting origin. Switching
 from localhost to the hosted site does not transfer your existing progress.
 Native overlay progress is also separate. Clearing site data removes progress.
-Together/QR/timer-sync screens are previews; they do not connect users.
+Together now connects real guest rooms across the website and Windows overlay.
+Share expiring QR/link/code invitations, keep independent timers, or opt into
+a shared start. QR generation and scanning run locally; no GPS is collected.
+Email sign-in and cross-device leaves/history remain disabled pending sender setup.
+See [the network spec](NETWORK_SPEC.md) and [backend setup](https://github.com/TristanTengGH2/CopyPanda/blob/main/backend/README.md).
 
 See `SPEC.md` for product direction and `web/assets/ASSETS.md` for artwork provenance.
