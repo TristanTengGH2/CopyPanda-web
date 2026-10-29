@@ -1,0 +1,29 @@
+/* Complete illustrated poses: one connected arm, one existing book, no sliding cutouts. */
+#panda-composition,#desk-foreground-composition{position:absolute;pointer-events:none;overflow:hidden}
+#panda-composition{z-index:1}
+#desk-foreground-composition{z-index:2}
+#panda-composition[hidden],#desk-foreground-composition[hidden]{display:none}
+#desk-foreground-composition>img{position:absolute;display:block;object-fit:fill}
+#desk-foreground-composition>.foreground-vine{left:20.8%;top:50%;width:35%;height:35%;clip-path:polygon(0 10%,39% 10%,39% 100%,0 100%)}
+#desk-foreground-composition>.foreground-flowers{left:27.3%;top:47.4%;width:30%;height:30%;clip-path:polygon(40% 18%,61% 18%,61% 56.5%,40% 56.5%)}
+#desk-foreground-composition>.foreground-mug{left:38.3%;top:49.2%;width:33%;height:33%;clip-path:polygon(69% 33%,87% 33%,87% 56%,69% 56%)}
+.scene-panda{position:absolute;left:41.2%;top:40.2%;width:26.7%;height:26.7%;padding:0;border:0;background:none;pointer-events:auto;cursor:pointer}
+.scene-panda:hover{filter:none}
+.scene-panda:focus-visible{outline:2px dashed #fff5d3;outline-offset:0;border-radius:35%}
+.scene-panda .panda-base{display:none}
+.panda-frames{position:absolute;inset:0;display:block;background-image:url('assets/panda-page-turn-sheet.png');background-size:300% 200%;background-repeat:no-repeat;background-position:0% 0%;transform:translate(0,0);pointer-events:none}
+.scene-panda.page-turn-playing{animation-play-state:paused}
+.scene-panda.page-turn-playing .panda-frames{animation:panda-book-turn 1.8s steps(1,end) forwards}
+.session-paused .scene-panda,.session-paused .scene-panda .panda-frames,.window-hidden .scene-panda,.window-hidden .scene-panda .panda-frames{animation-play-state:paused}
+.scene-panda.manual-page-preview .panda-frames{animation-play-state:running}
+.reduced-motion .scene-panda,.reduced-motion .panda-frames{animation:none!important;background-position:0% 0%!important;transform:none!important}
+@keyframes panda-book-turn{
+ /* Register each intact pose to the first frame's fixed upper-head landmarks. */
+ 0%{background-position:0% 0%;transform:translate(0,0)}
+ 16.666%{background-position:50% 0%;transform:translate(-.159%,0)}
+ 33.333%{background-position:100% 0%;transform:translate(-.318%,0)}
+ 50%{background-position:0% 100%;transform:translate(0,.478%)}
+ 66.666%{background-position:50% 100%;transform:translate(-.159%,.718%)}
+ 83.333%,100%{background-position:100% 100%;transform:translate(-.159%,.718%)}
+}
+@media(prefers-reduced-motion:reduce){.scene-panda,.panda-frames{animation:none!important;background-position:0% 0%!important;transform:none!important}}
