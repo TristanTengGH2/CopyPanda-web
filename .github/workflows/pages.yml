@@ -3,6 +3,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      cancel_deployment_id:
+        description: Optional stuck Pages deployment SHA to cancel before publishing
+        required: false
+        default: ''
 permissions:
   contents: read
   pages: write
@@ -18,6 +23,23 @@ jobs:
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - name: Cancel an explicitly selected stuck Pages deployment
+        if: github.event_name == 'workflow_dispatch' && inputs.cancel_deployment_id != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO_NAME: ${{ github.repository }}
+          DEPLOYMENT_ID: ${{ inputs.cancel_deployment_id }}
+        run: |
+          [[ "$DEPLOYMENT_ID" =~ ^[0-9a-f]{40}$ ]] || { echo 'Expected a deployment commit SHA'; exit 1; }
+          gh api --method POST "repos/$REPO_NAME/pages/deployments/$DEPLOYMENT_ID/cancel" >/dev/null
+          for attempt in {1..12}; do
+            status=$(gh api "repos/$REPO_NAME/pages/deployments/$DEPLOYMENT_ID" --jq '.status')
+            echo "Selected deployment status: $status"
+            if [[ "$status" != 'updating_pages' && "$status" != 'queued' ]]; then exit 0; fi
+            sleep 5
+          done
+          echo 'GitHub still reports the selected deployment as active; publication remains blocked.'
+          exit 1
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
