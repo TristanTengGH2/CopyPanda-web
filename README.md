@@ -27,6 +27,13 @@ The expected project URL is `https://tristantenggh2.github.io/CopyPanda-web/`.
 Progress is stored in browser local storage for the hosting origin. Switching
 from localhost to the hosted site does not transfer your existing progress.
 Native overlay progress is also separate. Clearing site data removes progress.
+
+Use **Menu → Settings → Data & backups** to download saved study history,
+notes, bookmark, and current goal as a local JSON file. Restoring previews the
+changes, preserves existing records, and skips repeated IDs. Restoring notes
+and the goal is optional. Restore requires an idle timer and local mode;
+running timers and sign-in details are not included in backup files.
+
 Together now connects real guest rooms across the website and Windows overlay.
 Share expiring QR/link/code invitations, keep independent timers, or opt into
 a shared start. QR generation and scanning run locally; no GPS is collected.
