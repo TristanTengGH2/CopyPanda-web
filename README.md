@@ -41,3 +41,6 @@ Email sign-in and cross-device leaves/history remain disabled pending sender set
 See [the network spec](NETWORK_SPEC.md) and [backend setup](https://github.com/TristanTengGH2/CopyPanda/blob/main/backend/README.md).
 
 See `SPEC.md` for product direction and `web/assets/ASSETS.md` for artwork provenance.
+
+See [DESIGN_GUIDELINES.md](DESIGN_GUIDELINES.md) for interface conventions and
+source guidance, and [IMPROVEMENTS.md](IMPROVEMENTS.md) for the current change log.
