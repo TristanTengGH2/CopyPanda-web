@@ -48,3 +48,8 @@ See `SPEC.md` for product direction and `web/assets/ASSETS.md` for artwork prove
 
 See [DESIGN_GUIDELINES.md](DESIGN_GUIDELINES.md) for interface conventions and
 source guidance, and [IMPROVEMENTS.md](IMPROVEMENTS.md) for the current change log.
+
+**Menu → Wardrobe** offers five free sweater colors that follow the existing
+focus and break animations. Choices stay in this browser and are included in
+local backups. See [WARDROBE.md](WARDROBE.md) for the clothing-mask foundation
+and the future garment-layer/Godot rig plan.
