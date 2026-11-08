@@ -34,6 +34,10 @@ changes, preserves existing records, and skips repeated IDs. Restoring notes
 and the goal is optional. Restore requires an idle timer and local mode;
 running timers and sign-in details are not included in backup files.
 
+If another tab saves newer data, this tab pauses saving and shows a recovery
+button. Download its work before reloading if you want to retain its draft.
+This detects stale local snapshots; it is not cross-device account sync.
+
 Together now connects real guest rooms across the website and Windows overlay.
 Share expiring QR/link/code invitations, keep independent timers, or opt into
 a shared start. QR generation and scanning run locally; no GPS is collected.
