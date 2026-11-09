@@ -56,4 +56,4 @@ and the future garment-layer/Godot rig plan.
 
 ## Clothing, rooms, and first-use help
 
-Open the leaf balance or Menu → Shop to preview the Rust beanie and two new room themes. Starter colors and original rooms stay free. Purchases and owned items are saved in this browser and included in backups; cloud inventory sync and native clothing are pending. New users can take a short optional tutorial. See [SHOP_SPEC.md](SHOP_SPEC.md) and [WARDROBE.md](WARDROBE.md).
+Open the leaf balance or Menu → Shop to preview the Rust beanie and room themes. Starter colors and original rooms stay free. Purchases and owned items are saved in this browser and included in backups; cloud inventory sync and native clothing are pending. New users can take a short optional tutorial. See [SHOP_SPEC.md](SHOP_SPEC.md) and [WARDROBE.md](WARDROBE.md).
