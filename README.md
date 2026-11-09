@@ -57,3 +57,7 @@ and the future garment-layer/Godot rig plan.
 ## Clothing, rooms, and first-use help
 
 Open the leaf balance or Menu → Shop to preview the Rust beanie and room themes. Starter colors and original rooms stay free. Purchases and owned items are saved in this browser and included in backups; cloud inventory sync and native clothing are pending. New users can take a short optional tutorial. See [SHOP_SPEC.md](SHOP_SPEC.md) and [WARDROBE.md](WARDROBE.md).
+
+## Layered panda review
+
+Open /rig-preview.html to inspect the panda cutouts, headwear pieces, sweater colors, and all twelve poses without changing progress. See [PANDA_RIG.md](PANDA_RIG.md). Shop → Rooms explicitly lists the original café and other free starter rooms before paid themes.
