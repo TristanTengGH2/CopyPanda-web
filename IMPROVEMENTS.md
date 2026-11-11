@@ -126,3 +126,7 @@ Validation: 36 automated tests pass. Browser checks cover desktop, 390×844 and 
 - Retained optional break completion, currency rules, scene animation registration, accessibility modes and short-window scrolling. See DESIGN_GUIDELINES.md for reasons and the proposed participant review.
 
 Validation: 36 automated tests pass. Browser checks covered setup, start/pause/resume, early end, 10-second demo completion, optional break, phone/tablet/desktop layouts, 320px large-text/high-contrast display, keyboard focus return and short landscape scrolling. Browser viewport previews are not physical-device or real participant tests. Native overlay binaries are unchanged.
+
+## 2026-11-11 — Publish approved overlay previews
+
+Published overlay-v1.3.0-preview.2 after explicit approval. Updated website Windows/Mac tabs to the tested Windows ZIP and Apple Silicon VM-tested Universal Mac artifact. Mac remains experimental, with GitHub sign-in and 30-day artifact retention explained. Bumped the app script URL so existing visitors receive the new links. Verified the public Windows asset checksum against the tested local package.
